@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - 11:235</title>
+  <meta name="viewport" content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./sign-in-11-235.css">
+</head>
+<body>
+  <!-- Root screen container: dimensions 375x812 at (426,-430) -->
+  <div class="screen" id="screen-11-235" style="width:375px; height:812px; background: var(--style-10-background); border-radius: var(--style-10-radius);">
+    <!-- Status Bar component at (426,-430) -->
+    <div class="abs" id="comp-status-bar" style="left:0px; top:0px; width:375px; height:44px;">
+      <!-- Time -->
+      <div class="abs" style="left:29.5px; top:12px; width:37px; height:18px; font-family: var(--typo-67-family); font-size: var(--typo-67-size); font-weight: var(--typo-67-weight); line-height: var(--typo-67-line-height); color: var(--typo-67-color);">19:27</div>
+      <!-- Symbols (WiFi/Battery approximated as static to preserve layout) -->
+      <!-- Battery body and fill paths provided via images to maintain fidelity -->
+      <img alt="Battery Path" src="figmaimages/figma_image_13_71_128_306.svg" class="abs" style="left:337px; top:18px; width:20px; height:9.5px;">
+      <img alt="Battery Outline" src="figmaimages/figma_image_13_71_128_307.svg" class="abs" style="left:336px; top:17px; width:22px; height:11.5px;">
+      <img alt="Battery Fill" src="figmaimages/figma_image_13_71_128_309.svg" class="abs" style="left:338px; top:19.08px; width:18px; height:7.67px;">
+      <!-- Combined shape bars (cellular) -->
+      <img alt="Cell Bar 1" src="figmaimages/figma_image_13_71_128_311.svg" class="abs" style="left:293.5px; top:24.3px; width:3px; height:4px;">
+      <img alt="Cell Bar 2" src="figmaimages/figma_image_13_71_128_312.svg" class="abs" style="left:298.3px; top:22.3px; width:3px; height:6px;">
+      <img alt="Cell Bar 3" src="figmaimages/figma_image_13_71_128_313.svg" class="abs" style="left:302.9px; top:20px; width:3px; height:8.3px;">
+      <img alt="Cell Bar 4" src="figmaimages/figma_image_13_71_128_314.svg" class="abs" style="left:307.6px; top:17.6px; width:3px; height:10.7px;">
+      <!-- Wi-Fi strokes omitted as vectors without imagePath; layout preserved -->
+    </div>
+
+    <!-- Title group at (456,-336) relative to root (426,-430) => left:30, top:94 -->
+    <div class="abs" id="grp-title" style="left:30px; top:94px; width:155px; height:75px;">
+      <div class="abs" id="text-hello" style="left:0px; top:0px; width:84px; height:45px; font-family: var(--typo-60-family); font-size: var(--typo-60-size); font-weight: var(--typo-60-weight); line-height: var(--typo-60-line-height); color: var(--typo-60-color);">Hello,</div>
+      <div class="abs" id="text-welcome" style="left:0px; top:45px; width:155px; height:30px; font-family: var(--typo-61-family); font-size: var(--typo-61-size); font-weight: var(--typo-61-weight); line-height: var(--typo-61-line-height); color: var(--typo-61-color);">Welcome Back!</div>
+    </div>
+
+    <!-- Input field Email at (456,-204) => left:30, top:226 -->
+    <div class="abs" id="input-email" style="left:30px; top:226px; width:315px; height:81px;">
+      <div class="abs" style="left:0px; top:26px; width:315px; height:55px; border: var(--style-30-stroke-width) solid var(--style-30-stroke); border-radius: var(--style-30-radius); background: transparent;"></div>
+      <div class="abs" style="left:20px; top:45px; width:61px; height:17px; font-family: var(--typo-65-family); font-size: var(--typo-65-size); font-weight: var(--typo-65-weight); line-height: var(--typo-65-line-height); color: var(--typo-65-color);">Enter Email</div>
+      <div class="abs" style="left:0px; top:0px; width:38px; height:21px; font-family: var(--typo-66-family); font-size: var(--typo-66-size); font-weight: var(--typo-66-weight); line-height: var(--typo-66-line-height); color: var(--typo-66-color);">Email</div>
+    </div>
+
+    <!-- Input field Password at (456,-93) => left:30, top:337 -->
+    <div class="abs" id="input-password" style="left:30px; top:337px; width:315px; height:81px;">
+      <div class="abs" style="left:0px; top:26px; width:315px; height:55px; border: var(--style-30-stroke-width) solid var(--style-30-stroke); border-radius: var(--style-30-radius); background: transparent;"></div>
+      <div class="abs" style="left:20px; top:45px; width:84px; height:17px; font-family: var(--typo-65-family); font-size: var(--typo-65-size); font-weight: var(--typo-65-weight); line-height: var(--typo-65-line-height); color: var(--typo-65-color);">Enter Password</div>
+      <div class="abs" style="left:0px; top:0px; width:107px; height:21px; font-family: var(--typo-66-family); font-size: var(--typo-66-size); font-weight: var(--typo-66-weight); line-height: var(--typo-66-line-height); color: var(--typo-66-color);">Enter Password</div>
+    </div>
+
+    <!-- Or Sign in With line at (516,130) => left:90, top:560 -->
+    <div class="abs" id="grp-or" style="left:90px; top:560px; width:195px; height:17px;">
+      <!-- Left line -->
+      <div class="abs" style="left:0px; top:9px; width:50px; height:0px; border-top: var(--style-28-stroke-width) solid var(--style-28-stroke);"></div>
+      <!-- Label -->
+      <div class="abs" style="left:57px; top:0px; width:81px; height:17px; font-family: var(--typo-64-family); font-size: var(--typo-64-size); font-weight: var(--typo-64-weight); line-height: var(--typo-64-line-height); color: var(--typo-64-color);">Or Sign in With</div>
+      <!-- Right line positioned from JSON: line 6 x=661 within group → relative left: 661-516=145 -->
+      <div class="abs" style="left:145px; top:9px; width:50px; height:0px; border-top: var(--style-28-stroke-width) solid var(--style-28-stroke);"></div>
+    </div>
+
+    <!-- Social Buttons -->
+    <!-- Google button group at (557,167) => left:131, top:597 -->
+    <div class="abs" id="btn-google" style="left:131px; top:597px; width:44px; height:44px;">
+      <div class="abs" style="left:0px; top:0px; width:44px; height:44px; background: var(--style-126-background); border-radius: var(--style-126-radius); box-shadow: var(--style-126-shadow);"></div>
+      <!-- Google icon component relative: icon rect at (567,177) => left 10, top 10 -->
+      <img alt="Google glyph base" src="figmaimages/figma_image_13_39.svg" class="abs" style="left:12px; top:12px; width:19.999996px; height:19.999996px;">
+      <img alt="Google glyph blue" src="figmaimages/figma_image_13_42.svg" class="abs" style="left:22px; top:20px; width:9.999998px; height:9.414121px;">
+    </div>
+
+    <!-- Facebook button group at (626,167) => left:200, top:597 -->
+    <div class="abs" id="btn-facebook" style="left:200px; top:597px; width:44px; height:44px;">
+      <div class="abs" style="left:0px; top:0px; width:44px; height:44px; background: var(--style-126-background); border-radius: var(--style-126-radius); box-shadow: var(--style-126-shadow);"></div>
+      <!-- Facebook vector path provided -->
+      <img alt="Facebook glyph" src="figmaimages/figma_image_13_61.svg" class="abs" style="left:10px; top:10px; width:20.000004px; height:20px;">
+    </div>
+
+    <!-- Big Button Sign In at (456,50) => left:30, top:480 -->
+    <button id="big-button" class="abs" style="left:30px; top:480px; width:315px; height:60px; background: var(--style-11-background); border-radius: var(--style-11-radius); border: none; padding:0;">
+      <div class="flex-row" style="width:100%; height:100%; justify-content:center; gap:8px;">
+        <span style="font-family: var(--typo-58-family); font-size: var(--typo-58-size); font-weight: var(--typo-58-weight); line-height: var(--typo-58-line-height); color: var(--typo-58-color);">Sign In</span>
+        <img alt="Arrow Right" src="figmaimages/figma_image_54_668_53_625.svg" style="width:20px; height:20px;">
+      </div>
+    </button>
+
+    <!-- Forgot Password at (466,8) => left:40, top:438 -->
+    <div class="abs" id="forgot" style="left:40px; top:438px; width:97px; height:17px; font-family: var(--typo-62-family); font-size: var(--typo-62-size); font-weight: var(--typo-62-weight); line-height: var(--typo-62-line-height); color: var(--typo-62-color); text-align: center;">Forgot Password?</div>
+
+    <!-- Bottom home indicator at (426,348) => left:0, top:778 -->
+    <div class="abs" id="home-indicator" style="left:0px; top:778px; width:375px; height:34px;">
+      <div class="abs" style="left:120px; top:21px; width:135px; height:5px; background: var(--style-32-background); border-radius: var(--style-32-radius);"></div>
+    </div>
+
+    <!-- CTA "Don't have an account? Sign up" at (525,266) => left:99, top:696 -->
+    <div class="abs" id="cta-signup" style="left:99px; top:696px; width:177px; height:17px; font-family: var(--typo-63-family); font-size: var(--typo-63-size); font-weight: var(--typo-63-weight); line-height: var(--typo-63-line-height); color: var(--typo-63-color);">Don’t have an account? Sign up</div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="./sign-in-11-235.js"></script>
+</body>
+</html>

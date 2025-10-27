@@ -1,0 +1,222 @@
+:root {
+  /* Colors (from design_system.colors) */
+  --color-colour-styles-neutral-colour-white: ;
+  --color-colour-styles-primary-colour-primary-100: ;
+  --color-colour-styles-neutral-colour-black: ;
+  --color-colour-styles-label-colour: ;
+  --color-colour-styles-secondary-colour-secondary-100: ;
+  --color-google-icon: ;
+  --color-facebook-icon: ;
+  --color-colour-styles-neutral-colour-gray-4: ;
+  --color-colour-styles-neutral-colour-gray-1: ;
+  --color-white-0: ;
+  --color-neutral-90: ;
+  --color-colour-styles-neutral-colour-gray-3: ;
+  --color-colour-styles-secondary-colour-secondary-80: ;
+  --color-colour-styles-secondary-colour-secondary-40: ;
+  --color-colour-styles-primary-colour-primary-80: ;
+  --color-neutral-30: ;
+  --color-colour-styles-rating: ;
+  --color-colour-styles-secondary-colour-secondary-20: ;
+  --color-colour-styles-primary-colour-primary-40: ;
+  --color-neutral-100: ;
+  --color-colour-styles-neutral-colour-gray-2: ;
+  --color-food-recipe-dark-grey: ;
+  --color-white: ;
+  --color-black: ;
+  --color-colour-styles-success-sucess-light: ;
+  --color-colour-styles-success-sucess: ;
+  --color-colour-styles-warning-light: ;
+  --color-colour-styles-warning: ;
+  --color-colour-styles-secondary-colour-secondary-60: ;
+  --color-colour-styles-primary-colour-primary-20: ;
+  --color-colour-styles-primary-colour-primary-60: ;
+  --color-gray-light: ;
+  --color-basic-white: ;
+  --color-color-grey-3: ;
+  --color-ffffff: #ffffff;
+  --color-292929: #292929;
+  --color-000000: #000000;
+  --color-e9fffa: #e9fffa;
+  --color-979797: #979797;
+  --color-fff2af: #fff2af;
+  --color-129575: #129575;
+  --color-dadada: #dadada;
+  --color-4cd964: #4cd964;
+  --color-121212: #121212;
+  --color-ff9c00: #ff9c00;
+  --color-ffc107: #ffc107;
+  --color-ff3d00: #ff3d00;
+  --color-4caf50: #4caf50;
+  --color-1976d2: #1976d2;
+  --color-035b81: #035b81;
+  --color-d9d9d9: #d9d9d9;
+  --color-484848: #484848;
+  --color-303030: #303030;
+  --color-a9a9a9: #a9a9a9;
+  --color-ffa61a: #ffa61a;
+  --color-ffce80: #ffce80;
+  --color-71b1a1: #71b1a1;
+  --color-130f26: #130f26;
+  --color-c1c1c1: #c1c1c1;
+  --color-ffe1b3: #ffe1b3;
+  --color-ffad30: #ffad30;
+  --color-dbebE7: #dbebe7;
+  --color-898989: #898989;
+  --color-292d32: #292d32;
+  --color-181818: #181818;
+  --color-c4c4c4: #c4c4c4;
+  --color-797979: #797979;
+  --color-808a96: #808a96;
+  --color-ceecd7: #ceecd7;
+  --color-31b057: #31b057;
+  --color-ffe1e7: #ffe1e7;
+  --color-fd3654: #fd3654;
+  --color-ffba4d: #ffba4d;
+  --color-d8d8d8: #d8d8d8;
+  --color-f6faf9: #f6faf9;
+  --color-afd3ca: #afd3ca;
+  --color-f4f4f4: #f4f4f4;
+  --color-9747ff: #9747ff;
+  --color-828282: #828282;
+
+  /* Typography variables (partial; we will reference by id for used ones) */
+  --typo-58-family: 'Poppins', sans-serif;
+  --typo-58-size: 16px;
+  --typo-58-weight: 600;
+  --typo-58-line-height: 24px;
+  --typo-58-color: var(--color-ffffff);
+
+  --typo-60-family: 'Poppins', sans-serif;
+  --typo-60-size: 30px;
+  --typo-60-weight: 600;
+  --typo-60-line-height: 45px;
+  --typo-60-color: var(--color-000000);
+
+  --typo-61-family: 'Poppins', sans-serif;
+  --typo-61-size: 20px;
+  --typo-61-weight: 400;
+  --typo-61-line-height: 30px;
+  --typo-61-color: var(--color-121212);
+
+  --typo-62-family: 'Poppins', sans-serif;
+  --typo-62-size: 11px;
+  --typo-62-weight: 400;
+  --typo-62-line-height: 16.5px;
+  --typo-62-color: var(--color-ff9c00);
+  --typo-62-align: center;
+
+  --typo-63-family: 'Poppins', sans-serif;
+  --typo-63-size: 11px;
+  --typo-63-weight: 500;
+  --typo-63-line-height: 16.5px;
+  --typo-63-color: var(--color-000000);
+
+  --typo-64-family: 'Poppins', sans-serif;
+  --typo-64-size: 11px;
+  --typo-64-weight: 500;
+  --typo-64-line-height: 16.5px;
+  --typo-64-color: var(--color-d9d9d9);
+
+  --typo-65-family: 'Poppins', sans-serif;
+  --typo-65-size: 11px;
+  --typo-65-weight: 400;
+  --typo-65-line-height: 16.5px;
+  --typo-65-color: var(--color-d9d9d9);
+
+  --typo-66-family: 'Poppins', sans-serif;
+  --typo-66-size: 14px;
+  --typo-66-weight: 400;
+  --typo-66-line-height: 21px;
+  --typo-66-color: var(--color-121212);
+
+  --typo-67-family: 'SF Pro Display', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --typo-67-size: 15px;
+  --typo-67-weight: 500;
+  --typo-67-line-height: 17.9px;
+  --typo-67-color: var(--color-303030);
+
+  /* Spacing (standard scale examples) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows (from design_system.shadows) */
+  --shadow-0: 0px 0px 5px 3px #696969;
+  --shadow-1: 0px 8px 25px 0 #202020;
+  --shadow-2: 0px 0px 8px 0 #6c6c6c;
+  --shadow-3: 0px 0px 20px 0 #000000;
+  --shadow-4: 0px 6.3119px 19.7248px 0 #202020;
+  --shadow-5: 0px 4px 4px 0 #000000;
+
+  /* Common element styles derived from styles tokens (subset used here) */
+  --style-10-background: var(--color-ffffff);
+  --style-10-radius: 30px;
+
+  --style-11-background: var(--color-129575);
+  --style-11-radius: 10px;
+
+  --style-12-opacity: 0;
+
+  --style-18-background: var(--color-121212);
+
+  --style-19-background: var(--color-ff9c00);
+
+  --style-28-stroke: var(--color-d9d9d9);
+  --style-28-stroke-width: 1px;
+
+  --style-29-background: var(--color-d9d9d9);
+
+  --style-30-stroke: var(--color-d9d9d9);
+  --style-30-stroke-width: 1.5px;
+  --style-30-radius: 10px;
+
+  --style-32-background: var(--color-121212);
+  --style-32-radius: 100px;
+
+  --style-126-background: var(--color-ffffff);
+  --style-126-radius: 10px;
+  --style-126-shadow: var(--shadow-0);
+
+  --style-21-fill: var(--color-ffc107);
+  --style-22-fill: var(--color-ff3d00);
+  --style-23-fill: var(--color-4caf50);
+  --style-24-fill: var(--color-1976d2);
+  --style-25-opacity: 0.58;
+  --style-26-fill: var(--color-035b81);
+  --style-27-opacity: 0;
+
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.abs {
+  position: absolute;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img {
+  display: block;
+}

@@ -1,0 +1,12 @@
+/* Screen-specific refinements for Sign In 11-235 */
+#screen-11-235 {
+  margin: 0 auto;
+  /* keep fixed size for pixel accuracy; optionally scale down on small viewports */
+}
+
+@media (max-width: 375px) {
+  html, body {
+    width: 375px;
+    overflow-x: hidden;
+  }
+}

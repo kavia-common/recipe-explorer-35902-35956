@@ -1,45 +1,8 @@
 import React from 'react';
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { ThemeProvider, useTheme, THEME } from './theme';
-
-// Simple Header component with navigation links
-function Header() {
-  const { theme, toggleTheme } = useTheme();
-
-  return (
-    <header className="app-header">
-      <div className="container header-inner">
-        <Link to="/" className="brand">
-          <span className="brand-mark">🍳</span>
-          <span className="brand-name">Recipe Explorer</span>
-        </Link>
-        <nav className="main-nav" aria-label="Primary">
-          <NavLink to="/" end className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
-            Home
-          </NavLink>
-          <NavLink to="/browse" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
-            Browse
-          </NavLink>
-          <NavLink to="/favorites" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
-            Favorites
-          </NavLink>
-          <NavLink to="/signin" className={({ isActive }) => 'nav-link btn btn-primary' + (isActive ? ' active' : '')}>
-            Sign In
-          </NavLink>
-        </nav>
-        <button
-          type="button"
-          className="theme-toggle"
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === THEME.LIGHT ? 'dark' : 'light'} mode`}
-        >
-          {theme === THEME.LIGHT ? '🌙' : '☀️'}
-        </button>
-      </div>
-    </header>
-  );
-}
+import { ThemeProvider } from './theme';
+import { Navbar, RecipeGrid, Pagination, Modal } from './components';
 
 // Placeholder pages for routing; these will be replaced with real pages later
 function HomePage() {
@@ -52,10 +15,39 @@ function HomePage() {
 }
 
 function BrowsePage() {
+  const [page, setPage] = React.useState(1);
+  const [query, setQuery] = React.useState('');
+  const [open, setOpen] = React.useState(false);
+
+  const mockRecipes = Array.from({ length: 9 }, (_, i) => ({
+    id: `r-${page}-${i + 1}`,
+    title: `Sample Recipe ${i + 1}`,
+    image: `https://picsum.photos/seed/recipe-${page}-${i}/600/400`,
+    description: 'A tasty sample recipe to demonstrate card layout and styling.',
+    rating: 3.5 + ((i % 3) * 0.5),
+    ratingCount: 12 + i,
+    tags: ['Quick', 'Easy', i % 2 ? 'Vegetarian' : 'Gluten-free'],
+  }));
+
   return (
     <section className="container page">
-      <h1 className="page-title">Browse Recipes</h1>
-      <p className="muted">Explore curated collections and categories.</p>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+        <div>
+          <h1 className="page-title">Browse Recipes</h1>
+          <p className="muted small">{query ? `Results for "${query}"` : 'Explore curated collections and categories.'}</p>
+        </div>
+        <button className="btn" onClick={() => setOpen(true)}>Open Info Modal</button>
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        <RecipeGrid recipes={mockRecipes} onFavorite={() => {}} favorites={{}} />
+      </div>
+
+      <Pagination page={page} total={5} onChange={setPage} />
+
+      <Modal open={open} title="How browsing works" onClose={() => setOpen(false)}>
+        <p className="muted">This is a placeholder modal to show the Ocean Professional modal styling. Integrate with real content later.</p>
+      </Modal>
     </section>
   );
 }
@@ -90,13 +82,14 @@ function SignInPage() {
 // PUBLIC_INTERFACE
 function AppShell() {
   /** Application shell with header, content area, and routes */
+  const [search, setSearch] = React.useState('');
   return (
     <div className="app-root">
-      <Header />
+      <Navbar onSearch={setSearch} />
       <main className="app-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/browse" element={<BrowsePage />} />
+          <Route path="/browse" element={<BrowsePage key={search} />} />
           <Route path="/recipe/:id" element={<RecipeDetailPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/signin" element={<SignInPage />} />

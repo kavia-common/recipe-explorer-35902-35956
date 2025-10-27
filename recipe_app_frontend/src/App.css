@@ -170,3 +170,198 @@
   padding: 24px 0 40px;
   color: rgba(17,24,39,0.6);
 }
+
+/* Responsive helpers */
+.hide-on-small {
+  display: none;
+}
+@media (min-width: 720px) {
+  .hide-on-small { display: block; }
+}
+
+/* SearchBar */
+.searchbar { width: 100%; }
+.searchbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px 6px 10px;
+  background: var(--color-surface);
+  border: 1px solid rgba(17,24,39,0.1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.searchbar-icon { opacity: 0.7; }
+.searchbar-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+.searchbar-clear {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgba(17,24,39,0.7);
+}
+.searchbar-submit { white-space: nowrap; }
+
+/* Tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 0 6px 6px 0;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.25);
+}
+
+/* Rating */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.rating-star { display: inline-block; }
+.rating-count {
+  font-size: 12px;
+  color: rgba(17,24,39,0.7);
+  margin-left: 2px;
+}
+
+/* Recipe Card */
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid rgba(17,24,39,0.06);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.recipe-card-media { display: block; background: #eef2ff; }
+.recipe-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.recipe-card-body { padding: 14px; }
+.recipe-card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.recipe-card-title { margin: 0; font-size: 1.05rem; }
+.recipe-card-desc { margin: 8px 0 10px; color: rgba(17,24,39,0.75); font-size: 0.95rem; }
+.recipe-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.recipe-card-tags { display: flex; flex-wrap: wrap; }
+.recipe-card-actions { margin-top: 12px; display: flex; justify-content: flex-end; }
+
+.fav-btn {
+  background: transparent;
+  border: 1px solid rgba(17,24,39,0.12);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.fav-btn.active {
+  background: rgba(245,158,11,0.15);
+  border-color: rgba(245,158,11,0.5);
+}
+
+/* Grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (min-width: 560px) {
+  .recipe-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .recipe-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.page-btn {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(17,24,39,0.12);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+.page-btn:hover { background: rgba(37,99,235,0.06); }
+.page-btn.active {
+  background: rgba(37,99,235,0.15);
+  border-color: rgba(37,99,235,0.4);
+}
+
+/* Modal */
+.modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+}
+.modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 92vw);
+  max-height: 86vh;
+  margin: 6vh auto 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(17,24,39,0.1);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(17,24,39,0.06);
+}
+.modal-title { font-weight: 600; }
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.modal-content {
+  padding: 16px;
+  overflow: auto;
+}
